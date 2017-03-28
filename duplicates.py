@@ -12,6 +12,13 @@
 
 Выводим: Название файла, размер и пути дубликатов
 
+1) либо 2 цикла - берем файл, потом цикл по всем файлам
+2) либо сначала сделать общий список файлов, потом по нему цикл - пути!!!! а не названия файлов
+
+?
+как быть с ситуацией, когда потом мы встретим дубликат?
+Удалять из списка? 
+
 '''
 
 import os
@@ -24,17 +31,24 @@ path = '/home/ildar/Projects/DevMan/'
 # for file in os.listdir(path):
 # 	print(file, os.path.getsize(file))
 
+all_files = []
 
+# create list with all files. Join for get full path
 for root, dirs, files in os.walk(path):
-	print("\nroot: ", root)
-	print("dirs: ", dirs)
-	print("files: ", files)
-	# for file in files:
-	# 	for item in files:
-	# 		if file == item:
-	# 			if os.path.getsize(file) == os.path.getsize(item):
-	# 				print("{} {}".format(os.path.join(root, file), os.path.getsize(file)))
-	# 				print("{} {}".format(os.path.join(root, item), os.path.getsize(item)))
+	for file in files:
+		all_files.append(os.path.join(root, file))
+
+print(all_files)
+
+for file in all_files:
+
+
+
+# 		for item in files:
+# 			if file == item:
+# 				if os.path.getsize(file) == os.path.getsize(item):
+# 					print("{} {}".format(os.path.join(root, file), os.path.getsize(file)))
+# 					print("{} {}".format(os.path.join(root, item), os.path.getsize(item)))
 
 
 
