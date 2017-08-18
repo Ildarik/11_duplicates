@@ -1,6 +1,11 @@
 # Anti-Duplicator
 
-[TODO. There will be project description]
+Find duplicate(name+size) files in your computer. 
+
+# How to use
+'''bash
+duplicates.py /home/ildar/
+'''
 
 # Project Goals
 
