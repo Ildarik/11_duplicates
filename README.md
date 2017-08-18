@@ -3,9 +3,9 @@
 Find duplicate(name+size) files in your computer. 
 
 # How to use
-'''bash
+```bash
 duplicates.py /home/ildar/
-'''
+```
 
 # Project Goals
 
