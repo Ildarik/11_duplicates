@@ -1,6 +1,6 @@
 # Anti-Duplicator
 
-Find duplicate(name+size) files in your computer. 
+Find duplicate files (name & size) in your computer. 
 
 # How to use
 ```bash
