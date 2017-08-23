@@ -1,4 +1,5 @@
 import os
+import sys
 from collections import defaultdict
 from sys import argv
 
@@ -18,6 +19,9 @@ def get_duplicated_files_dict(files_dict):
 
 if __name__ == '__main__':
     path_dir = argv[1]
+    if not os.path.exists(path_dir):
+        print("Path: {}\ndoesn't exists".format(path_dir))
+        sys.exit(1)
     files_dict = get_files_dict(path_dir)
     duplicated_files_dict = get_duplicated_files_dict(files_dict)
     for _, duplicated_files_list in duplicated_files_dict.items():
