@@ -19,3 +19,7 @@ def get_duplicated_files_dict(files_dict):
 if __name__ == '__main__':
     path_dir = argv[1]
     files_dict = get_files_dict(path_dir)
+    duplicated_files_dict = get_duplicated_files_dict(files_dict)
+    for _, duplicated_files_list in duplicated_files_dict.items():
+        print("\nDUPLICATES:")
+        print('\n'.join(duplicated_files_list))
